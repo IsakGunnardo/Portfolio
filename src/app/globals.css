@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.scrollbar-hide::-webkit-scrollbar{
+  display: none;
+
+}
+
+.scrollbar-hide{
+  scrollbar-width: none;
+}
+
+body{
+margin: 0;
+padding: 0;
+background-image: url(unsplash_JgOeRuGD_Y4.png);
+background-size:100% 100% ;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+}
+
+
+
+.blinking-cursor {
+
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
