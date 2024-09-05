@@ -43,10 +43,10 @@ const Contact = () => {
     };
     emailjs
       .send(
-        "service_5sif438",
-        "template_gg0r6zq",
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         emailParams,
-        "FIVqjS_Zz3o6eZ84Q"
+        process.env.NEXT_PUBLIC_USER_ID as string
       )
       .then(
         (result) => {
@@ -78,7 +78,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="flex flex-col gap-16 w-full mx-auto  mt-36 text-center bg-pink-50 py-5">
+    <div
+      id="contact"
+      className="flex flex-col gap-16 w-full mx-auto  mt-36 text-center bg-pink-50 py-5"
+    >
       <div className="bg-yellow-300">Contact me</div>
       <div className="flex flex-col gap-16 md:flex-row">
         <div className="w-full bg-green-500 p-3">this is a square</div>
