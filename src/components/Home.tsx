@@ -12,7 +12,7 @@ import TypeWritingEffect from "./TypeWritingEffect";
 
 const Home = () => {
   return (
-    <div className="flex-col text-white text-opacity-85 gap-16 md:flex  w-full h-dvh py-20 ">
+    <div id="home" className="flex-col text-white text-opacity-85 gap-16 md:flex  w-full h-dvh py-20 ">
       <div className="flex items-center relative mb-10 w-2/3 mx-auto justify-center p-2 bg-gradient-to-br from-gray-500 via-blue-200 to-black rounded-full md:hidden">
         <div className="absolute -top-8 -left-8 w-48 h-48 bg-gradient-to-r from-blue-300 via-white to-blue-300 rounded-full blur-2xl opacity-70 z-0"></div>
         <div className="absolute -bottom-6 -right-10 w-40 h-40 bg-gradient-to-l from-blue-400 via-white to-blue-400 rounded-full blur-2xl opacity-70 z-1"></div>

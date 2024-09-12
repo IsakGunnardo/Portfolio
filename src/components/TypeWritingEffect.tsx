@@ -35,7 +35,7 @@ const TypeWritingEffect = () => {
   }, [text, isDeleting, loopNum]);
   return (
     <h2 className="text-4xl text-ardo font-bold">
-      I'm a <span className="text-blue-500">{text}
+      {"I'm"} a <span className="text-blue-500">{text}
         <span className="blinking-cursor text-ardo font-semibold text-5xl">|</span>
       </span>
     </h2>
