@@ -38,7 +38,16 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
-  const scrollTop = () => {
+  const scrollToSection = (id: any) => {
+    const section = document.querySelector(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+  const scrollHome = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -47,8 +56,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`h-20 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 top-0 sticky transition-transform duration-300 z-20 ${
-        hasScrolled ? "bg-ardo bg-opacity-85 text-black" : ""
+      className={`h-20 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 top-0 sticky transition-transform shadow-md duration-300 z-20 ${
+        hasScrolled ? "bg-[#F5F5F5] bg-opacity-85 text-black" : ""
       } ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="h-full flex items-center justify-between md:hidden">
@@ -76,7 +85,7 @@ const Navbar = () => {
         >
           <Link href="/" className="flex items-center gap-3">
             <FaCode className="text-2xl" />
-            <div className="text-2xl tracking-wide">ARDO</div>
+            <div className="text-2xl tracking-wide ">ARDO</div>
           </Link>
         </div>
 
@@ -87,19 +96,20 @@ const Navbar = () => {
               hasScrolled ? "text-black " : ""
             }`}
           >
-            <Link href="/" onClick={scrollTop}>
-              Home
-            </Link>
-            <Link href="#about">About</Link>
-            <Link href="#projects">Projects</Link>
-            <Link href="#contact">Contact</Link>
+            <button onClick={() => scrollHome()}>Home</button>
+
+            <button onClick={() => scrollToSection("#about")}>About </button>
+            <button onClick={() => scrollToSection("#projects")}>
+              Projects
+            </button>
+            <button onClick={() => scrollToSection("#contact")}>Contact</button>
           </div>
         </div>
 
         {/* RIGHT */}
         <div className="m flex">
           <a href="/assets/CV.pdf" download="CV.pdf">
-            <button className="font-semibold flex gap-4 items-center justify-center bg-ardo p-1 rounded-md focus:outline-none focus:ring-2 hover:scale-105">
+            <button className="font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md focus:outline-none focus:ring-2 hover:scale-105">
               Download CV
               <FaDownload />
             </button>

@@ -83,7 +83,7 @@ const Contact = () => {
     // CONTAINER
     <div
       id="contact"
-      className="flex flex-col gap-10 w-full mx-auto  mt-36 text-center 0 py-5"
+      className="flex flex-col px-8 md:px-32 gap-10 w-full mx-auto  mt-36 text-center 0 py-5"
     >
       {/* TOP  */}
       <h1 className="text-2xl font-semibold text-ardo">Contact me</h1>
@@ -111,7 +111,7 @@ const Contact = () => {
         </div>
 
         {/* RIGHT CONTAINER WITH FORM*/}
-        <div className="w-full  0 p-3">
+        <div className="w-full  0 p-3 ">
           <form id="contactForm" className="" onSubmit={handleSubmit}>
             {/* NAME AND EMAIL WRAPPER  */}
             <div className="flex flex-col gap-2">
@@ -128,7 +128,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     placeholder="Your Name"
-                    className="w-full mt-1 p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white text-gray-800 "
+                    className="text-sm md:text-base w-full mt-1 p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white shadow-md text-gray-800 "
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -138,7 +138,7 @@ const Contact = () => {
                 <div className="w-full">
                   {/* <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-black opacity-80 "
+                    className="block text-sm md:text-base font-medium text-black opacity-80 "
                   >
                     Email
                   </label> */}
@@ -146,7 +146,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     placeholder="Your Email Address"
-                    className="w-full mt-1 p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white text-gray-800 "
+                    className="text-sm md:text-base w-full mt-1 p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white shadow-md text-gray-800 "
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -164,7 +164,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   placeholder="Your Message"
-                  className="w-full h-full  p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white text-gray-800 "
+                  className="text-sm md:text-base w-full h-full  p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white shadow-md text-gray-800 "
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -176,7 +176,7 @@ const Contact = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full mt-4 py-3 rounded-md bg-white text-black text-opacity-70 font-medium hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 transition ease-in-out duration-200 shadow-lg"
+                  className="w-full mt-4 py-3 rounded-md bg-white text-sm md:text-base text-black text-opacity-70 font-extrabold hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-opacity-50 transition ease-in-out duration-200 shadow-md"
                   disabled={!isFormValid() || isSending}
                 >
                   {isSending ? "Sending..." : "Send"}

@@ -40,8 +40,13 @@ const Footer = () => {
   };
 
   return (
-    <div className="hidden md:flex justify-evenly text-center gap-36 h-36 py-4 px-8 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-ardo bg-opacity-85 text-black ">
-      <div className="w-1/3 ">
+    <div
+      onClick={() => scrollHome()}
+      className="hidden md:flex flex-col justify-center items-center text-center h-36 py-4 px-8 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-[#F5F5F5]  bg-opacity-85 text-black "
+    >
+      <h1 className="text-3xl">You reached the bottom of the page</h1>
+      <p>Press me to to get back to the top</p>
+      {/* <div className="w-1/3 ">
         <ul className="flex flex-col gap-4 ">
           <h1 className="font-semibold">Contact</h1>
           <div className="text-center">
@@ -61,12 +66,12 @@ const Footer = () => {
         <h1 className="font-semibold">Socials</h1>
         <div className=" flex flex-col py-2 items-center justify-center w-full text-1xl md:flex md:justify-start gap-4 text-3xl text-black text-opacity-80 ">
           <div className="flex">
-            <FaFacebook className="bg-ardo p-1 rounded-full shadow-sm shadow-white focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
-            <FaLinkedin className="bg-ardo p-1 rounded-full shadow-sm shadow-white focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
+            <FaFacebook className=" p-1 rounded-full bg-[#F5F5F5] shadow-md focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
+            <FaLinkedin className=" p-1 rounded-full bg-[#F5F5F5] shadow-md focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
           </div>
           <div className="flex">
-            <FaGithub className="bg-ardo p-1 rounded-full shadow-sm shadow-white focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
-            <FaYoutube className="bg-ardo p-1 rounded-full shadow-sm shadow-white focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
+            <FaGithub className=" p-1 rounded-full bg-[#F5F5F5] shadow-md focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
+            <FaYoutube className=" p-1 rounded-full bg-[#F5F5F5] shadow-md focus:outline-none focus:ring-2 hover:scale-105 hover:text-blue-900 hover:bg-blue-200 " />
           </div>
         </div>
       </div>
@@ -82,7 +87,7 @@ const Footer = () => {
             Contact{`>`}{" "}
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

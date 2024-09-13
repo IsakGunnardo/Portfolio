@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .scrollbar-hide::-webkit-scrollbar{
   display: none;
 
@@ -15,11 +16,13 @@
 body{
 margin: 0;
 padding: 0;
-background-image: url(unsplash_JgOeRuGD_Y4.png);
+background-color: #F5F5F5;
+
+/* background-image: url(unsplash_JgOeRuGD_Y4.png);
 background-size:100% 100% ;
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-position: center;
+background-position: center; */
 }
 
 
@@ -63,10 +66,10 @@ background-position: center;
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, rgba(245, 245, 245, 0.6), transparent);
+  background: radial-gradient(circle, rgba(227, 217, 217, 0.6), transparent);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 1.2s ease, height 1.2s ease, opacity 1s ease; /* Smooth transition for the splash */
+  transition: width 1.5s ease, height 1.5s ease, opacity 1s ease; /* Smooth transition for the splash */
   z-index: 0;
   opacity: 0; /* Initially, the radial gradient is fully transparent */
 }
@@ -85,3 +88,17 @@ background-position: center;
   position: relative;
   z-index: 1; /* Ensure content is above the splash */
 }
+
+
+.section {
+  transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  background-color: transparent;
+}
+
+.blurred {
+  filter: blur(5px);
+  opacity: 0.2;
+  background-color: #F5F5F5;
+
+}
+

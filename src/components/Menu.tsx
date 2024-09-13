@@ -7,7 +7,6 @@ const Menu = () => {
   const [open, setOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -23,7 +22,15 @@ const Menu = () => {
     };
   }, []);
 
-
+  const scrollToSection = (id: any) => {
+    const section = document.querySelector(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   const scrollHome = () => {
     window.scrollTo({
       top: 0,
@@ -33,25 +40,46 @@ const Menu = () => {
   return (
     <div className="">
       <RiMenu3Fill
-       
         className={`cursor-pointer text-4xl text-ardo ${
-        hasScrolled ? " bg-opacity-85 text-black" : ""
-      }`}
+          hasScrolled ? " bg-opacity-85 text-black" : ""
+        }`}
         onClick={() => setOpen((prev) => !prev)}
       />
       {/* <Image src="/menu.png" alt="" /> */}
       {open && (
-        <div className="absolute bg-ardo bg-opacity-85 text-black left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10">
-          <button onClick={() => {setOpen((prev) => !prev); scrollHome();}}>Home {`>`} </button>
-          <Link href="#about" onClick={() => setOpen((prev) => !prev)}>
-            About{`>`} 
-          </Link>
-          <Link href="#projects" onClick={() => setOpen((prev) => !prev)}>
-            Projects{`>`} 
-          </Link>
-          <Link href="#contact" onClick={() => setOpen((prev) => !prev)}>
-            Contact{`>`} 
-          </Link>
+        <div className="absolute bg-ardo bg-opacity-85 text-[#F5F5F5] left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10">
+          <button
+            onClick={() => {
+              setOpen((prev) => !prev);
+              scrollHome();
+            }}
+          >
+            Home 
+          </button>
+          <button
+            onClick={() => {
+              setOpen((prev) => !prev);
+              scrollToSection("#about");
+            }}
+          >
+            About 
+          </button>
+          <button
+            onClick={() => {
+              setOpen((prev) => !prev);
+              scrollToSection("#projects");
+            }}
+          >
+            Projects 
+          </button>
+          <button
+            onClick={() => {
+              setOpen((prev) => !prev);
+              scrollToSection("#contact");
+            }}
+          >
+            Contact 
+          </button>
         </div>
       )}
     </div>

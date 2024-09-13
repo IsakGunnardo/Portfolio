@@ -79,7 +79,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col px-36 flex-wrap text-center items-center justify-center text-white text-opacity-85 gap-16 md:flex  w-full h-dvh py-20"
+      className="flex flex-col px-16 md:px-32 flex-wrap text-center items-center justify-center text-black text-opacity-85 gap-16 md:flex  w-full h-dvh py-20"
     >
       <div className="text-5xl">{text}</div>
       {showExperiance && (
