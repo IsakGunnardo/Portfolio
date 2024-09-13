@@ -7,7 +7,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
-import profilBild from "/Users/isakgunnardo/PORTFOLIOMAPP/nyportfolio/portfoliony/public/profilimg.png";
+import profilBild from "/public/profilimg.png";
 import TypeWritingEffect from "./TypeWritingEffect";
 
 const Home = () => {
