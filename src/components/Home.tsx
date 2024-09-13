@@ -59,12 +59,12 @@ const Home = () => {
                 Hire Me
               </button>
 
-            <a href="/assets/CV.pdf" download="CV.pdf">
+            {/* <a href="/assets/CV.pdf" download="CV.pdf"> */}
               <button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">
                 Download CV
                 <FaDownload />
               </button>
-            </a>
+            {/* </a> */}
           </div>
           {/* SOCIALAMEDIER  */}
           <div className=" flex items-center justify-center w-full text-1xl md:flex md:justify-start gap-4 text-3xl text-black text-opacity-80 ">

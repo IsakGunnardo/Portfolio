@@ -108,12 +108,12 @@ const Navbar = () => {
 
         {/* RIGHT */}
         <div className="m flex">
-          <a href="/assets/CV.pdf" download="CV.pdf">
+          {/* <a href="/assets/CV.pdf" download="CV.pdf"> */}
             <button className="font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md focus:outline-none focus:ring-2 hover:scale-105">
               Download CV
               <FaDownload />
             </button>
-          </a>
+          {/* </a> */}
         </div>
       </div>
     </div>
