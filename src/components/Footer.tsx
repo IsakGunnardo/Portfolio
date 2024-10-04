@@ -44,8 +44,8 @@ const Footer = () => {
       onClick={() => scrollHome()}
       className="hidden md:flex flex-col justify-center items-center text-center h-36 py-4 px-8 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-[#F5F5F5]  bg-opacity-85 text-black "
     >
-      <h1 className="text-3xl">You reached the bottom of the page</h1>
-      <p>Press me to to get back to the top</p>
+      {/* <h1 className="text-3xl">You reached the bottom of the page</h1>
+      <p>Press me to to get back to the top</p> */}
       {/* <div className="w-1/3 ">
         <ul className="flex flex-col gap-4 ">
           <h1 className="font-semibold">Contact</h1>
