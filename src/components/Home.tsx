@@ -11,6 +11,27 @@ import profilBild from "/public/img.png";
 import TypeWritingEffect from "./TypeWritingEffect";
 
 const Home = () => {
+  const handleDownload = () => {
+    const files = [
+      {
+        fileName: "Sogeti_CV.pdf",
+        fileUrl: "/assets/Sogeti_CV.pdf"
+      },
+      {
+        fileName: "letter.pdf",
+        fileUrl: "/assets/Sogeti_letter.pdf"
+      },
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = file.fileUrl;
+      link.download = file.fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link)
+    });
+  };
   const scrollToSection = (id: any) => {
     const section = document.querySelector(id);
     if (section) {
@@ -61,18 +82,14 @@ const Home = () => {
               Hire Me
             </button>
 
-            <a href="/assets/Sogeti_CV.pdf" download="Sogeti_CV.pdf">
-            <button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">
-              Download CV
-              <FaDownload />
-            </button>
-            </a>
-            <a href="/assets/Sogeti_letter.pdf" download="Sogeti_letter.pdf">
-            <button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">
-              Download Personal Letter
-              <FaDownload />
-            </button>
-            </a>
+<a href="/" onClick={handleDownload}>
+<button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">Download CV & letter
+<FaDownload />
+
+</button>
+  
+</a>
+ 
           </div>
           {/* SOCIALAMEDIER  */}
           <div className=" flex items-center justify-center w-full text-1xl md:flex md:justify-start gap-4 text-3xl text-black text-opacity-80 ">

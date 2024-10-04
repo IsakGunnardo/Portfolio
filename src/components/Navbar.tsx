@@ -9,6 +9,27 @@ const Navbar = () => {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  const handleDownload = () => {
+    const files = [
+      {
+        fileName: "Sogeti_CV.pdf",
+        fileUrl: "/assets/Sogeti_CV.pdf"
+      },
+      {
+        fileName: "letter.pdf",
+        fileUrl: "/assets/Sogeti_letter.pdf"
+      },
+    ];
+
+    files.forEach((file) => {
+      const link = document.createElement("a");
+      link.href = file.fileUrl;
+      link.download = file.fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link)
+    });
+  };
   // Handles scroll direction detection
   useEffect(() => {
     const handleScroll = () => {
@@ -108,18 +129,14 @@ const Navbar = () => {
 
         {/* RIGHT */}
         <div className="m flex">
-          <a href="/assets/Sogeti_CV.pdf" download="Sogeti_CV.pdf">
+          {/* <a href="/" onClick={handleDownload}></a>
+
             <button className="font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md focus:outline-none focus:ring-2 hover:scale-105">
-              Download CV
+              Download CV & Letter
               <FaDownload />
             </button>
-          </a>
-          <a href="/assets/Sogeti_letter.pdf" download="Sogeti_letter.pdf">
-            <button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">
-              Download Personal Letter
-              <FaDownload />
-            </button>
-            </a>
+ */}
+
         </div>
       </div>
     </div>
