@@ -77,6 +77,11 @@ const Contact = () => {
     );
   };
 
+
+  console.log("User ID:", process.env.NEXT_PUBLIC_USER_ID);
+console.log("Service ID:", process.env.NEXT_PUBLIC_SERVICE_ID);
+console.log("Template ID:", process.env.NEXT_PUBLIC_TEMPLATE_ID);
+
   return (
     // CONTAINER
     <div
