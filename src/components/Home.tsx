@@ -14,12 +14,16 @@ const Home = () => {
   const handleDownload = () => {
     const files = [
       {
-        fileName: "Sogeti_CV.pdf",
-        fileUrl: "/assets/Sogeti_CV.pdf"
+        // Sogeti_CV.pdf
+        fileName: "",
+        fileUrl: ""
+        // /assets/Sogeti_CV.pdf
       },
       {
-        fileName: "letter.pdf",
-        fileUrl: "/assets/Sogeti_letter.pdf"
+        // letter.pdf
+        fileName: "",
+        fileUrl: ""
+        // /assets/Sogeti_letter.pdf
       },
     ];
 
@@ -82,8 +86,9 @@ const Home = () => {
               Hire Me
             </button>
 
-<a href="/" onClick={handleDownload}>
-<button className=" font-semibold flex gap-4 items-center justify-center bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">Download CV & letter
+<a href="#" >
+{/* onClick={handleDownload} */}
+<button className=" font-semibold flex gap-4 items-center justify-center opacity-55 cursor-not-allowed bg-[#F5F5F5] shadow-md p-1 rounded-md  focus:outline-none focus:ring-2 hover:scale-105 ">Download CV & letter
 <FaDownload />
 
 </button>
