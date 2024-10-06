@@ -60,7 +60,7 @@ const Contact = () => {
         setSubmissionStatus("error");
       }
     );
-      );
+    
 
     setFormData({
       name: "",
