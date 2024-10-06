@@ -48,7 +48,7 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID as string,
         process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         emailParams,
-        process.env.NEXT_PUBLIC_USER_ID as string
+        process.env.NEXT_PRIVATE_USER_ID as string
       )
       .then(
         (result) => {
