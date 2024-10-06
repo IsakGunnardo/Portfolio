@@ -44,24 +44,22 @@ const Contact = () => {
       message: formData.message,
     };
     emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
-        emailParams,
-        process.env.NEXT_PUBLIC_USER_ID as string
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          submissionStatus;
-          // alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          submissionStatus;
-
-          // alert("Failed to send message, please try again.");
-        }
+    .send(
+      process.env.NEXT_PUBLIC_SERVICE_ID as string,
+      process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+      emailParams,
+      process.env.NEXT_PUBLIC_USER_ID as string // Ensure this uses the NEXT_PUBLIC prefix
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        setSubmissionStatus("success");
+      },
+      (error) => {
+        console.log(error.text);
+        setSubmissionStatus("error");
+      }
+    );
       );
 
     setFormData({
